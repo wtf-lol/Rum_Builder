@@ -1,0 +1,31 @@
+#!/bin/bash
+#
+cd $HOME
+
+# Configure Git
+git config --global color.ui true
+git config --global user.name ZunayedDihan
+git config --global user.email zunayeddihan@gmail.com
+
+# Git Haxxx xD
+echo "${git_cookies}" > ~/git_hax.sh
+bash ~/git_hax.sh && rm ~/git_hax.sh
+
+# Repo init and sync
+repo init -u git://github.com/ProjectSakura/android.git -b 11 --depth 1 --no-repo-verify -g default,-device,-mips,-darwin,-notdefault
+
+# Start repo sync
+repo sync --current-branch --force-sync --no-clone-bundle --no-tags --optimized-fetch --prune -j `nproc`
+
+# Purge repo
+rm -rf .repo
+
+# Notify In telegram
+telegram -M "*Project Sakura Compile Status*: \`DEVICE RESOURCE PULLING STARTED!\`.
+*Started at*:- \`$(date)\`."
+
+# Pull Device Sources
+git clone --depth=1 https://github.com/ZunayedDihan/device_xiaomi_daisy_work.git -b ps device/xiaomi/daisy
+git clone --depth=1 https://github.com/ZunayedDihan/vendor_xiaomi_daisy_work -b lineage-18.1 vendor/xiaomi
+git clone --depth=1 https://github.com/lupesoltec/vendor_MiuiCamera.git -b daisy vendor/MiuiCamera
+git clone --depth=1 https://github.com/geopd/revvz_sakura kernel/xiaomi/msm8953
