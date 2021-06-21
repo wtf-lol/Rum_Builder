@@ -11,19 +11,19 @@ git config --global user.email zunayeddihan@gmail.com
 echo "${git_cookies}" > ~/git_hax.sh
 bash ~/git_hax.sh && rm ~/git_hax.sh
 
-# Repo init and sync
-repo init -u git://github.com/ProjectSakura/android.git -b 11 --depth 1 --no-repo-verify -g default,-device,-mips,-darwin,-notdefault
+# Repo init  and sync
+repo init -u git://github.com/DerpFest-11/manifest.git -b 11 --depth=1 --no-repo-verify -g default,-device,-mips,-darwin,-notdefault
 
 # Start repo sync
-repo sync --current-branch --force-sync --no-clone-bundle --no-tags --optimized-fetch --prune -j `nproc`
+repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 
 # Purge repo
 rm -rf .repo
 
-# Notify In telegram
-telegram -M "*Project Sakura Compile Status*: \`DEVICE RESOURCE PULLING STARTED!\`.
-*Started at*:- \`$(date)\`."
-
+# Gapps
+rm -rf vendor/gms
+git clone --depth=1 https://gitlab.com/ZunayedDihan/vendor_gms -b 11 vendor/gms
+rm -rf device/generic/opengl-transport
 
 # Pull Device Sources
 git clone --depth=1 https://github.com/ZunayedDihan/device_xiaomi_daisy_work -b base device/xiaomi/daisy
