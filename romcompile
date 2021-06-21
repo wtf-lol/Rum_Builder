@@ -2,7 +2,7 @@
 cd $HOME
 
 # Notify In telegram
-telegram -M "*Project Sakura Compile Status*: \`STARTED!\`.
+telegram -M "*DERPFEST ROM Compile Status*: \`STARTED!\`.
 *Started at*:- \`$(date)\`."
 
 # Setup CCache
@@ -14,8 +14,8 @@ build_start=$(date +"%s")
 #
 #
 source build/envsetup.sh
-lunch lineage_daisy-userdebug
-make bacon -j8
+lunch derp_daisy-user
+mka derp -j8
 #
 #
 build_end=$(date +"%s")
