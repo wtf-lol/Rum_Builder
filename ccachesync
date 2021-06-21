@@ -17,16 +17,16 @@ echo "$rclone_config" > ~/.config/rclone/rclone.conf
 echo "$tg_auth" > ~/.telegram.sh
 
 # Notify In telegram
-telegram -M "*Project Sakura Compile Status*: \`TRIGGERED!\`.
+telegram -M "*DERPFEST ROM Compile Status*: \`TRIGGERED!\`.
 *Triggered at*:- \`$(date)\`."
 
 # Pull CCache
 cd $CCACHE_DIR
-rclone copy remote:/ccache/psbuildercache $CCACHE_DIR -P
-tar -I "zstd -1 -T2" -xf psbuildercache
-rm psbuildercache
+rclone copy remote:/ccache/derpcache $CCACHE_DIR -P
+tar -I "zstd -1 -T2" -xf derpcache
+rm derpcache
 
 # Push CCache
 sleep 100m
-tar -I "zstd -1 -T2" -cf psbuildercache *
-rclone copy psbuildercache remote:/ccache/ -P
+tar -I "zstd -1 -T2" -cf derpcache *
+rclone copy derpcache remote:/ccache/ -P
