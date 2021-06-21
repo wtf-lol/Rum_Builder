@@ -24,8 +24,9 @@ rm -rf .repo
 telegram -M "*Project Sakura Compile Status*: \`DEVICE RESOURCE PULLING STARTED!\`.
 *Started at*:- \`$(date)\`."
 
+
 # Pull Device Sources
-git clone --depth=1 https://github.com/ZunayedDihan/device_xiaomi_daisy_work.git -b ps device/xiaomi/daisy
-git clone --depth=1 https://github.com/ZunayedDihan/vendor_xiaomi_daisy_work -b lineage-18.1 vendor/xiaomi
+git clone --depth=1 https://github.com/ZunayedDihan/device_xiaomi_daisy_work -b base device/xiaomi/daisy
+git clone --depth=1 https://github.com/ZunayedDihan/vendor_xiaomi_daisy_work -b 11R vendor/xiaomi
 git clone --depth=1 https://github.com/lupesoltec/vendor_MiuiCamera.git -b daisy vendor/MiuiCamera
-git clone --depth=1 https://github.com/geopd/revvz_sakura kernel/xiaomi/msm8953
+git clone --depth=1 https://github.com/acras01/android_kernel_xiaomi_daisy -b arrow-11.0 kernel/xiaomi/msm8953
