@@ -22,7 +22,7 @@ rm -rf .repo
 
 # Gapps
 rm -rf vendor/gms
-git clone --depth=1 https://gitlab.com/ZunayedDihan/vendor_gms -b 11 vendor/gms
+git clone --depth=1 https://gitlab.com/ZunayedDihan/vendor_gms -b 11-new vendor/gms
 rm -rf device/generic/opengl-transport
 
 # Pull Device Sources
