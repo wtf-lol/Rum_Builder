@@ -21,9 +21,9 @@ repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 rm -rf .repo
 
 # Gapps
-rm -rf vendor/gms
-git clone --depth=1 https://gitlab.com/ZunayedDihan/vendor_gms -b 11-new vendor/gms
-rm -rf device/generic/opengl-transport
+#rm -rf vendor/gms
+#git clone --depth=1 https://gitlab.com/ZunayedDihan/vendor_gms -b 11-new vendor/gms
+#rm -rf device/generic/opengl-transport
 
 # Pull Device Sources
 git clone https://github.com/ZunayedDihan/device_xiaomi_daisy_work -b wip-1 device/xiaomi/daisy
