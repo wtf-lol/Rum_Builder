@@ -26,7 +26,7 @@ git clone --depth=1 https://gitlab.com/ZunayedDihan/vendor_gms -b 11-new vendor/
 rm -rf device/generic/opengl-transport
 
 # Pull Device Sources
-git clone https://github.com/ZunayedDihan/device_xiaomi_daisy_work -b wip-1 device/xiaomi/daisy
-git clone --depth=1 https://github.com/ZunayedDihan/vendor_xiaomi_daisy_work -b wip vendor/xiaomi/daisy
+git clone --depth=1 https://github.com/DerpFest-Devices/device_xiaomi_daisy -b 11 device/xiaomi/daisy
+git clone --depth=1 https://github.com/DerpFest-Devices/vendor_xiaomi_daisy -b 11 vendor/xiaomi/daisy
 git clone --depth=1 https://github.com/lupesoltec/vendor_MiuiCamera.git -b daisy vendor/MiuiCamera
-git clone --depth=1 https://github.com/acras01/android_kernel_xiaomi_daisy -b arrow-11.0 kernel/xiaomi/msm8953
+git clone --depth=1 https://github.com/TheSanty/kernel_xiaomi_msm8953 -b a11/master kernel/xiaomi/msm8953
