@@ -29,4 +29,4 @@ rm -rf device/generic/opengl-transport
 git clone --depth=1 https://github.com/DerpFest-Devices/device_xiaomi_daisy -b 11 device/xiaomi/daisy
 git clone --depth=1 https://github.com/DerpFest-Devices/vendor_xiaomi_daisy -b 11 vendor/xiaomi/daisy
 git clone --depth=1 https://github.com/lupesoltec/vendor_MiuiCamera.git -b daisy vendor/MiuiCamera
-git clone --depth=1 https://github.com/TheSanty/kernel_xiaomi_msm8953 -b a11/master kernel/xiaomi/msm8953
+git clone --depth=1 https://github.com/ItsVixano/android_kernel_xiaomi_daisy -b lineage-18.1 kernel/xiaomi/msm8953
