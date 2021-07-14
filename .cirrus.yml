@@ -10,7 +10,7 @@ container:
   memory: 32G
 
 task:
-    name: Hyouka Builder
+    name: CI Check
     timeout_in: 120m
     ccachesync_background_script:
       - ./ccachesync
