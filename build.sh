@@ -108,7 +108,7 @@ ccache -z
 case "${rom}" in
  "derp") make bacon -j18 2>&1 | tee build.log
     ;;
- "aicp") brunch daisy -j18 2>&1 | tee build.log
+ "aicp") brunch daisy | tee build.log
     ;;
  *) echo "Invalid option!"
     exit 1
