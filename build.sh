@@ -28,7 +28,6 @@ rom_one(){
      repo init --depth=1 --no-repo-verify -u git://github.com/DerpFest-11/manifest.git -b 11 -g default,-device,-mips,-darwin,-notdefault
      git clone ${TOKEN}/local -b $rom .repo/local_manifests
      repo sync -c --no-clone-bundle --no-tags --optimized-fetch --force-sync -j$(nproc --all)
-     export DOT_OFFICIAL=true SKIP_ABI_CHECKS=true
      . build/envsetup.sh && lunch derp_daisy-user
 }
 
