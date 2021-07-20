@@ -6,10 +6,10 @@ ccache_download ()
 {
   mkdir -p ~/.config/rclone
   echo "$rclone_config" > ~/.config/rclone/rclone.conf
-  rclone copy remote:ccache/$rom.ccache.tar.zst /tmp -P
-  tar -xaf $rom.ccache.tar.zst
-  tar "-I zstd -1 -T8" -xf $rom.ccache.tar.zst
-  rm -rf $rom.ccache.tar.zst
+  rclone copy remote:ccache/$rom/ccache.tar.zst /tmp -P
+  tar -xaf ccache.tar.zst
+  tar "-I zstd -1 -T8" -xf ccache.tar.zst
+  rm -rf ccache.tar.zst
 }
 
 cd /tmp

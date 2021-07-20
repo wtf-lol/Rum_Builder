@@ -10,8 +10,8 @@ ZIPNAME=$(basename ${ZIP})
 # final ccache upload
 zst_tar ()
 {
-    time tar "-I zstd -1 -T16" -cf $rom.tar.zst $rom
-    rclone copy --drive-chunk-size 256M --stats 1s $rom.ccache.tar.zst remote:ccache/ -P
+    time tar "-I zstd -1 -T16" -cf $1.tar.zst $1
+    rclone copy --drive-chunk-size 256M --stats 1s $1.tar.zst remote:$1/$rom -P
 }
 
 
