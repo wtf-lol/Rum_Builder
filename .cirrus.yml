@@ -7,13 +7,13 @@ task:
     memory: 32G
   environment:
     CIRRUS_WORKING_DIR: "/tmp/ci"
-    rclone_config: ""
-    TOKEN: ""
-    CHATID: ""
-    BOTTOKEN: ""
-    GIT_COOKIES: ""
-    TDRIVE: ""
-    rom: "sakura"
+    rclone_config: "ENCRYPTED[4503ba0a5e75db273f0d35173281526013e36045a20c357fc935cd46702836df218a69a9774dbdb6060aac9e2ca181a6]"
+    TOKEN: "ENCRYPTED[5ea12669d3b2ae43bafc74cf781d2666c0e008466bd4809e2f2c3d6b50d83d06ea79dae0dfb15cdecbdcb8f541307ef6]"
+    CHATID: "ENCRYPTED[9372d991210ba78babb170c1da2ebb957c94d91c265698ef68c986e02f13e5eb4ceed64f7c1deaeb344af3c1dc285c9f]"
+    BOTTOKEN: "ENCRYPTED[c2976e75e97ee6d0d73556cfb2b639a0be2672f513cce87c899bae5ae119030856fb3e434ee24128949ecf096d5dcc4e]"
+    GIT_COOKIES: "ENCRYPTED[5e472bace76608b7cb7eb1088e19a66cda128e1a13521a00fad1f10ea13d7072e39194c4f1a2d3d0cc6ad68054368ef9]"
+    TDRIVE: "ENCRYPTED[c4d9ade2c5012bdc1ad465e086e9a94998f059df9ada5879eec00835724f1d5eb6befc2c039ed614ee55cfeaa4346c43]"
+    rom: "ProjectSakura"
     T_DEVICE: "vince"
   download_ccache_background_script:
       - bash download_ccache.sh
