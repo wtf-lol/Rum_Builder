@@ -19,8 +19,15 @@ bash ~/git_cookies.sh
 rom_one(){
      repo init --depth=1 --no-repo-verify -u git://github.com/ProjectSakura/android.git -b 11 -g default,-device,-mips,-darwin,-notdefault
      repo sync -c --no-clone-bundle --no-tags --optimized-fetch --force-sync -j$(nproc --all)
-     git clone ${TOKEN}/local_manifest_vince -b sakura .repo/local_manifests
-     repo sync -c --no-clone-bundle --no-tags --optimized-fetch --force-sync -j$(nproc --all) 
+     git clone https://github.com/PrajjuS/device_xiaomi_vince --single-branch -b CI device/xiaomi/vince
+     git clone https://github.com/PrajjuS/vendor_xiaomi_vince --single-branch -b sakura-test-user vendor/xiaomi/vince
+     git clone https://github.com/Blacksuan19/kernel_dark_ages_vince.git --single-branch -b darky kernel/xiaomi/vince
+     rm -rf hardware/qcom-caf/wlan && git clone https://android.googlesource.com/platform/hardware/qcom/wlan hardware/qcom-caf/wlan
+     rm -rf hardware/qcom-caf/msm8996
+     git clone https://gitlab.com/PrajjuS/hardware_qcom_audio.git --single-branch -b r11.0 hardware/qcom-caf/msm8996/audio
+     git clone https://gitlab.com/PrajjuS/hardware_qcom_display.git --single-branch -b r11.0 hardware/qcom-caf/msm8996/display
+     git clone https://gitlab.com/PrajjuS/hardware_qcom_media.git --single-branch -b r11.0 hardware/qcom-caf/msm8996/media
+     cd kernel/xiaomi/vince && git checkout darky && git revert fec013b9f5bb70c1e51285aa6e042f21f4298447 --no-edit && cd ../../..
      . build/envsetup.sh && lunch lineage_vince-user && export SAKURA_BUILD_TYPE=microg && export TARGET_USES_BLUR=true && export SAKURA_LAWNCHAIR=true && export EXTRA_FOD_ANIMATIONS=true
 }
 
